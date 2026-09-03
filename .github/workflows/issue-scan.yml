@@ -22,7 +22,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
-          ./scripts/cron_tick.sh
+          bash scripts/cron_tick.sh
       - name: Commit scan state and run log
         run: |
           git config user.name "exam-cron-bot"
