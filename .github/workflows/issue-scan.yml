@@ -1,0 +1,32 @@
+name: Issue Scan Evidence
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: read
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Scan issues
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          ./scripts/cron_tick.sh
+      - name: Commit scan state and run log
+        run: |
+          git config user.name "exam-cron-bot"
+          git config user.email "exam-cron-bot@users.noreply.github.com"
+          git add state/last-scan.json run-log.md
+          git commit -m "chore: record issue scan" || exit 0
+          git push
