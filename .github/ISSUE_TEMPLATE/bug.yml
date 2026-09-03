@@ -1,0 +1,45 @@
+name: Bug 反馈
+labels: ["type/bug", "status/new", "source/exam-group"]
+description: 记录 octo-server 缺陷反馈
+body:
+  - type: textarea
+    id: original
+    attributes:
+      label: 用户原始反馈
+      description: 必须保留原话，不改写、不脑补。
+      placeholder: 粘贴用户/考官原话
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: 影响范围
+      placeholder: 影响谁、影响什么场景、严重程度
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据 / 来源
+      description: 如涉及源码结论，必须使用 来源: <相对路径>#L<起>-L<止>
+      placeholder: "来源: modules/example/file.go#L10-L25"
+    validations:
+      required: false
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options:
+        - priority/P0
+        - priority/P1
+        - priority/P2
+        - priority/P3
+    validations:
+      required: true
+  - type: textarea
+    id: next
+    attributes:
+      label: 下一步动作
+      placeholder: 需要追问 / 需要补 PRD / 需要 review / 可以关闭
+    validations:
+      required: true
