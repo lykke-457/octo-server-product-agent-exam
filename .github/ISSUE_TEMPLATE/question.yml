@@ -1,0 +1,23 @@
+name: Question / 源码问答
+labels: ["type/question", "status/new", "source/exam-group"]
+description: 记录产品/源码问题与答案沉淀
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: 问题原文
+      placeholder: 粘贴问题原文
+    validations:
+      required: true
+  - type: textarea
+    id: answer
+    attributes:
+      label: 当前答案
+      description: 答不确定就写不确定；关键结论必须带源码引用。
+      placeholder: |
+        结论：
+        证据：
+        来源: path/to/file.go#L10-L25
+        不确定：
+    validations:
+      required: false
