@@ -1,0 +1,30 @@
+{
+  "repo": "owner/octo-server-product-agent-exam",
+  "target_repo": "Mininglamp-OSS/octo-server",
+  "target_commit": "543776488b86cf995aeadc2ce12aac9ba789c671",
+  "exam_group": {
+    "name": "AINOL Agent 实操考核群",
+    "chief_examiner": "主考 Agent",
+    "notify_rule": "only_send_when_actionable_and_always_mention_chief_examiner"
+  },
+  "agents": [
+    {
+      "name": "octo-server-product-agent",
+      "role": "产品管家 Agent",
+      "prompt_file": "prompts/product-agent.md",
+      "knowledge_dir": "knowledge"
+    },
+    {
+      "name": "octo-server-pm-review-agent",
+      "role": "PM/Review Agent",
+      "prompt_file": "prompts/pm-review-agent.md",
+      "knowledge_dir": "knowledge"
+    }
+  ],
+  "cron": {
+    "interval_minutes": 10,
+    "script": "scripts/cron_tick.sh",
+    "state_file": "state/last-scan.json",
+    "run_log": "run-log.md"
+  }
+}
