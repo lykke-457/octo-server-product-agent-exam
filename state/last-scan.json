@@ -1,9 +1,62 @@
 {
   "repo": "lykke-457/octo-server-product-agent-exam",
-  "scanned_at": 1788768992,
-  "issues": [],
+  "scanned_at": 1788770088,
+  "issues": [
+    {
+      "number": 4,
+      "title": "安全反馈：GitHub webhook 需强制校验 X-Hub-Signature-256",
+      "state": "open",
+      "labels": [
+        "priority/P1",
+        "source/user-feedback",
+        "status/triaged",
+        "type/bug"
+      ],
+      "updated_at": "2026-09-07T08:30:52Z",
+      "html_url": "https://github.com/lykke-457/octo-server-product-agent-exam/issues/4"
+    },
+    {
+      "number": 3,
+      "title": "feature: GitHub incoming webhook 支持强制校验 X-Hub-Signature-256",
+      "state": "open",
+      "labels": [
+        "priority/P1",
+        "source/user-feedback",
+        "status/triaged",
+        "type/feature"
+      ],
+      "updated_at": "2026-09-07T08:30:25Z",
+      "html_url": "https://github.com/lykke-457/octo-server-product-agent-exam/issues/3"
+    },
+    {
+      "number": 2,
+      "title": "bug: BotFather /revoke 后旧 bf_ token 短时间仍可调用 Bot API",
+      "state": "open",
+      "labels": [
+        "priority/P1",
+        "source/user-feedback",
+        "status/triaged",
+        "type/bug"
+      ],
+      "updated_at": "2026-09-07T08:26:03Z",
+      "html_url": "https://github.com/lykke-457/octo-server-product-agent-exam/issues/2"
+    },
+    {
+      "number": 1,
+      "title": "Bug: /revoke 后旧 bf_ token 仍可短时间调用 Bot API",
+      "state": "open",
+      "labels": [
+        "priority/P1",
+        "source/user-feedback",
+        "status/triaged",
+        "type/bug"
+      ],
+      "updated_at": "2026-09-07T08:26:00Z",
+      "html_url": "https://github.com/lykke-457/octo-server-product-agent-exam/issues/1"
+    }
+  ],
   "rate": {
-    "remaining": "4999",
+    "remaining": "4998",
     "reset": "1788772592"
   }
 }
