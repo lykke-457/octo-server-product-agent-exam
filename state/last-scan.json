@@ -1,6 +1,6 @@
 {
   "repo": "lykke-457/octo-server-product-agent-exam",
-  "scanned_at": 1789256759,
+  "scanned_at": 1789257353,
   "issues": [
     {
       "number": 3,
@@ -56,7 +56,7 @@
     }
   ],
   "rate": {
-    "remaining": "4996",
+    "remaining": "4995",
     "reset": "1789258069"
   }
 }
